@@ -70,20 +70,8 @@ jobs:
       
         working-directory: app
         
-        run: >-
+        run: ./gradlew :androidApp:assembleDebug --no-daemon --no-configuration-cache --max-workers=2 -Pkotlin.compiler.execution.strategy=in-process -Pkotlin.daemon.enabled=false
         
-          ./gradlew :androidApp:assembleDebug
-          
-          --no-daemon
-          
-          --no-configuration-cache
-          
-          --max-workers=2
-          
-          -Pkotlin.compiler.execution.strategy=in-process
-          
-          -Pkotlin.daemon.enabled=false
-          
 
 
       - name: Upload Museme APK
@@ -100,12 +88,6 @@ jobs:
           
           retention-days: 14
           
-
-
-
-
-
-
 
 
 
