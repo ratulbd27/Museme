@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: museme-room-server
+    runtime: docker
+    plan: free
+    dockerfilePath: ./Dockerfile
+    healthCheckPath: /health
+    envVars:
+      - key: MUSEME_ROOM_AUTH_TOKEN
+        sync: false
+      - key: MUSEME_MAX_ROOM_SIZE
+        value: "8"
