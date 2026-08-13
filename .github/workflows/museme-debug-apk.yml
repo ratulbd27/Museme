@@ -42,7 +42,7 @@ jobs:
 
       - name: Unpack Museme source
       
-        run: unzip -q museme-source.zip -d app
+        run: unzip -q museme-source-track-sync-compact.zip -d app
         
 
 
