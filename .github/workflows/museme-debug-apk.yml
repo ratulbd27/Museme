@@ -36,31 +36,7 @@ jobs:
     
       - name: Check out build files
       
-        uses: actions/checkout@v4
-        
-        with:
-        
-          fetch-depth: 1
-          
-
-
-      - name: Set up JDK 21
-      
-        uses: actions/setup-java@v4
-        
-        with:
-        
-          java-version: '21'
-          
-          distribution: temurin
-          
-          cache: gradle
-          
-
-
-      - name: Set up Gradle
-      
-        uses: gradle/actions/setup-gradle@v4
+        uses: actions/checkout@v5
         
 
 
@@ -68,6 +44,18 @@ jobs:
       
         run: unzip -q museme-source.zip -d app
         
+
+
+      - name: Set up JDK 21
+      
+        uses: actions/setup-java@v5
+        
+        with:
+        
+          java-version: '21'
+          
+          distribution: temurin
+          
 
 
       - name: Make Gradle wrapper executable
@@ -112,11 +100,6 @@ jobs:
           
           retention-days: 14
           
-
-
-
-
-
 
 
 
