@@ -5,9 +5,9 @@ RUN apt-get update \
     && rm -rf /var/lib/apt/lists/*
 
 WORKDIR /workspace
-COPY museme-source-track-sync-compact.zip /workspace/museme-source-track-sync-compact.zip
+COPY museme-source-edge-touch.zip /workspace/museme-source-edge-touch.zip
 RUN mkdir /workspace/app \
-    && unzip -q /workspace/museme-source-track-sync-compact.zip -d /workspace/app
+    && unzip -q /workspace/museme-source-edge-touch.zip -d /workspace/app
 
 WORKDIR /workspace/app
 RUN chmod +x ./gradlew \
